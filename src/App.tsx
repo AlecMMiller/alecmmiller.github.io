@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {SectionTitle} from "./elements/divider"
+import {Experience } from "./sections/experience"
+
 
 function App() {
+  const EXPERIENCE = 'Experience'
+  const PROJECTS = 'Projects'
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Section">
+          <SectionTitle title={EXPERIENCE} conclusion={false} />
+          <Experience />
+          <SectionTitle title={EXPERIENCE} conclusion={true} />
+      </div>
+      <div className="Section">
+          <SectionTitle title={PROJECTS} conclusion={false} />
+          <SectionTitle title={PROJECTS} conclusion={true} />
+      </div>
     </div>
   );
 }
